@@ -9,6 +9,7 @@
   "author": "Arielle Wilson",
   "license": "ISC",
   "dependencies": {
+    "@jwarielle/cupcakenames": "^3.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.3"
   }

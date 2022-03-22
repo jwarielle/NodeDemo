@@ -7,27 +7,35 @@
     <h2 style="color: #65C18C;">The yellow ones are favorites of mine!</h2>
 
     <ul style="color: #008E89;">
-        <% cupcakes.forEach((cupcake)=> { %>
-            <li>
-              <% if (cupcake.favorite) { %>
-                <h2>
-                    <%= cupcake.name %>
-                </h2>
-              <% } else { %>
-                <h2>
+      <% cupcakes.forEach((cupcake)=> { %>
+          <li>
+            <% if (cupcake.favorite) { %>
+              <h2>
                   <%= cupcake.name %>
-                </h2>
-              <% } %>
-                <p>
-                    <ul>
-                      <li>cupcake.cakeFlavor</li>
-                      <li>cupcake.frostingFlavor</li>
-                    </ul>
-                </p>
-            </li>
-            <hr />
-        <% }) %>
-    </ul>
+              </h2>
+            <% } else { %>
+              <h2>
+                <%= cupcake.name %>
+              </h2>
+            <% } %>
+              <p>
+                  <ul>
+                    <li>cupcake.cakeFlavor</li>
+                    <li>cupcake.frostingFlavor</li>
+                  </ul>
+              </p>
+          </li>
+          <hr />
+      <% }) %>
+  </ul>
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= myCupcakeName %></h5>
+      <p class="card-text">A randomly generated cupcake name for your pleasure!</p>
+      <!-- <button type="button" class="btn btn-primary">Generate New Name!</button> -->
+    </div>
+  </div>
   </div>
 </body>
 

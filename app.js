@@ -1,4 +1,5 @@
 const express = require('express')
+const cupcakeNames = require("@jwarielle/cupcakenames");
 const app = express()
 const port = 3000
 
@@ -35,13 +36,21 @@ const cupcakes = [
   }
 ]
 
+let myCupcakeName = cupcakeNames(); //=> "Lemon Surprise"
+
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
     res.render('pages/index', {
-      cupcakes
+      cupcakes,
+      myCupcakeName
     })
 })
+
+app.get('/map', (req, res) => {
+  res.render('pages/map')
+})
+
 app.listen(port, () => {
   console.log(`App listening at port ${port}`)
 })
